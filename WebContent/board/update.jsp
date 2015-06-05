@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="board.dto.*" %>
 <!DOCTYPE html>
 
 <html>
@@ -30,22 +31,22 @@
 		  </div>
 		</nav>
 		
-		<!-- 게시판 글쓰기  시작  -->
-		<form class="form-horizontal">
+		<!-- 게시판 수정하기  시작  -->
+		<form class="form-horizontal" method="post" enctype="multipart/form-data" action="write.board">
 		  <fieldset>
 		    <legend>게시판 수정 </legend>
 		    
 		    <div class="form-group">
 		      <label for="inputEmail" class="col-lg-2 control-label">이름 : </label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" id="subject" placeholder="이름을 입력하세요.">
+		        <input type="text" value="<%= board.getName() %>" class="form-control" id="subject" placeholder="이름을 입력하세요.">
 		      </div>
 		    </div>
 		    
 		    <div class="form-group">
 		      <label for="inputEmail" class="col-lg-2 control-label">제목 : </label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" id="subject" placeholder="제목을 입력하세요.">
+		        <input type="text" value="<%= board.getTitle() %>" class="form-control" id="subject" placeholder="제목을 입력하세요.">
 		      </div>
 		    </div>
 		   

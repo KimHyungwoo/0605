@@ -64,11 +64,11 @@
 		  		 
 		  %>
 		    <tr>
-		      <td><%= board.getNum() %>1</td>
-		      <td><a href="view.jsp">Column content</a></td>
-		      <td>Column content</td>
-		      <td>Column content</td>
-		      <td>Column content</td>
+		      <td><%= board.getNum() %></td>
+		      <td><a href="view.board?num=<%= board.getNum() %>"><%= board.getTitle() %></a></td>
+		      <td><%= board.getName() %></td>
+		      <td><%= board.getWdate() %></td>
+		      <td><%= board.getHits() %></td>
 		      <td>삭제</td>
 		    </tr>
 		    <%
